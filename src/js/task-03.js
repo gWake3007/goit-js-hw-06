@@ -12,3 +12,7 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+const galleryes = document.querySelector("ul.gallery");
+
