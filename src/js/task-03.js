@@ -14,5 +14,13 @@ const images = [
 ];
 
 
-const galleryes = document.querySelector("ul.gallery");
+const galleryes = document.querySelector(".gallery");
 
+const imageList = images.map((elem) => 
+`<li><img src="${elem.url}" alt="${elem.alt}" width="400px" height="400px"></img></li>`)
+.join("");
+
+galleryes.insertAdjacentHTML("beforeend", imageList);
+
+galleryes.style.display = "flex";
+galleryes.style.flexDirection = "row";
