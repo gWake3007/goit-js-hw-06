@@ -22,7 +22,7 @@
 const formElement = document.querySelector('.login-form');
 formElement.addEventListener('submit', onFormSubmit);
 
-console.log(formElement);
+// console.log(formElement);
 
 function onFormSubmit(event) {
     event.preventDefault()
@@ -31,14 +31,15 @@ function onFormSubmit(event) {
     console.log(email.value)
     console.log(password.value)
 
+
+    if (email.value === "" || password.value === "") {
+        return alert(`Не всі поля заповненні!`);
+    };
+    
     const data = {
         email: email.value,
         password: password.value,
     };
     console.log(data);
-
-    if (email.value === "" || password.value === "") {
-        alert(`Не всі поля заповненні!`);
-    };
-
+    event.currentTarget.reset();
 };
