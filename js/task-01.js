@@ -25,9 +25,17 @@ console.log(`Number of categories: ${categoriesUl.children.length}`);
 // });
 // console.log(categoriesMass.join(" "));
 
-[...categoriesUl.children].forEach((elem) =>{
-    const categorisTitle = elem.querySelector("h2");
-    const categoriesNumber = elem.querySelectorAll("li");
-    console.log(`Category: ${categorisTitle.textContent}`);
-    console.log(`Elements: ${categoriesNumber.length}`);
+[...categoriesUl.children].forEach((elem) => {
+  const categorisTitle = elem.querySelector("h2");
+  const categoriesNumber = elem.querySelectorAll("li");
+  console.log(`Category: ${categorisTitle.textContent}`);
+  console.log(`Elements: ${categoriesNumber.length}`);
 });
+
+let count = 0;
+const intervalId = setInterval(() => {
+  console.log(count++);
+}, 1000);
+setTimeout(() => {
+  clearInterval(intervalId);
+}, 5000);
