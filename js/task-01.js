@@ -26,9 +26,9 @@ console.log(`Number of categories: ${categoriesUl.children.length}`);
 // console.log(categoriesMass.join(" "));
 
 [...categoriesUl.children].forEach((elem) => {
-  const categorisTitle = elem.querySelector("h2");
+  const categoriesTitle = elem.querySelector("h2");
   const categoriesNumber = elem.querySelectorAll("li");
-  console.log(`Category: ${categorisTitle.textContent}`);
+  console.log(`Category: ${categoriesTitle.textContent}`);
   console.log(`Elements: ${categoriesNumber.length}`);
 });
 
